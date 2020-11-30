@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { log } from 'util';
+import { Destination } from '../models/destination.model'
 
 @Component({
   selector: 'app-list',
@@ -7,12 +7,18 @@ import { log } from 'util';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  destinos: string[];
+  destinos: Destination[];
 
   constructor() {
-    this.destinos = ['Barcelona', 'Madrid', 'Sevilla'];
+    this.destinos = [];
   }
 
-  ngOnInit(): void {
+  save(nombre:string, url :string):boolean{
+    this.destinos.push(new Destination(nombre, url))
+    console.log(this.destinos)
+    return false
   }
+
+  ngOnInit(): void {}
+
 }

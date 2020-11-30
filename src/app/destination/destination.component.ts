@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Destination} from '../models/destination.model'
 
 @Component({
   selector: 'app-destination',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class DestinationComponent implements OnInit {
-  @Input() nombre: string;
+  @Input() destino: Destination;
   
   constructor() {}
   ngOnInit(): void {
