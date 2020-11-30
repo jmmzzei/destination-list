@@ -1,0 +1,29 @@
+<div class="container content">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <span class="anchor" id="formLogin"></span>
+      <div class="card card-outline-secondary">
+        <div class="card-header">
+          <h3 class="mb-0">Whishlist</h3>
+        </div>
+        <div class="card-body">
+          <form >
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text"  id="nombre" class="form-control" placeholder="Ingresar nombre...">
+            </div>
+            <div class="form-group">
+              <label for="imagenUrl">Imagen Url</label>
+              <input type="text"  id="imagenUrl" class="form-control" placeholder="Ingresar url...">
+            </div>
+            <button class="btn btn-primary">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+	<hr	class="mb-5">
+	<div	class="row">
+    <app-destination *ngFor="let x of destinos" [nombre]="x"></app-destination>
+	</div>
+</div>
