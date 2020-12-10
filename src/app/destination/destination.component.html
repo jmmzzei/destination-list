@@ -3,16 +3,24 @@
     <div class="card-img">
       <img src="https://placeimg.com/380/230/nature" alt="" />
       <span
-        ><h4>{{ destino.nombre }}</h4></span
+        ><h4>{{ position + 1 }}</h4></span
       >
     </div>
     <div class="card-desc">
       <h3>{{ destino.nombre }}</h3>
       <p>{{ destino.imageUrl }}</p>
+      <p>Services:</p>
+      <ul>
+        <li *ngFor="let s of destino.services">
+          <span [ngSwitch]="s">
+            <i *ngSwitchCase="'breakfast'">{{ s }}</i>
+            <b *ngSwitchCase="'pool'">{{ s }}</b>
+            <p *ngSwitchDefault>{{ s }}</p>
+          </span>
+        </li>
+      </ul>
       <a href="#" class="btn-card" (click)="go()">Ir</a>
-      <span [style.display]="destino.isSelected() ? '' : 'none'">
-        - CHECKED -</span
-      >
+      <span *ngIf="destino.isSelected()"> - CHECKED -</span>
     </div>
   </div>
 </div>

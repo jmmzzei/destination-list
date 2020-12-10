@@ -8,6 +8,7 @@ import { Destination } from '../models/destination.model';
 })
 export class DestinationComponent implements OnInit {
   @Input() destino: Destination;
+  @Input() position: number;
   @Output() clicked: EventEmitter<Destination>;
 
   constructor() {
