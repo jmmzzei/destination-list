@@ -4,18 +4,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { DestinationComponent } from './destination/destination.component';
+import { DetailDestinationComponent } from './detail-destination/detail-destination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    DestinationComponent
+    DestinationComponent,
+    DetailDestinationComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

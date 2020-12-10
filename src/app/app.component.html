@@ -1,4 +1,13 @@
 <div class="content" role="main">
+  <header class="page-header">
+    <div class="container">
+      <h1>Router</h1>
+      <div class="navLinks">
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]="['/destination']">Destination</a>
+      </div>
+    </div>
+  </header>
   <div class="card-container mt-5">
     <app-list></app-list>
   </div>
