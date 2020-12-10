@@ -21,6 +21,7 @@
       </ul>
       <a href="#" class="btn-card" (click)="go()">Ir</a>
       <span *ngIf="destino.isSelected()"> - CHECKED -</span>
+      <a [routerLink]="['/detail']" class="mx-3">Detail</a>
     </div>
   </div>
 </div>
