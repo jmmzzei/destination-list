@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Destination } from '../models/destination.model'
+import { Destination } from '../models/destination.model';
 
 @Component({
   selector: 'app-list',
@@ -13,12 +13,18 @@ export class ListComponent implements OnInit {
     this.destinos = [];
   }
 
-  save(nombre:string, url :string):boolean{
-    this.destinos.push(new Destination(nombre, url))
-    console.log(this.destinos)
-    return false
+  save(nombre: string, url: string): boolean {
+    this.destinos.push(new Destination(nombre, url));
+    console.log(this.destinos);
+    return false;
   }
 
   ngOnInit(): void {}
 
+  chosed(d: Destination) {
+    this.destinos.forEach((e) => {
+      e.setSelected(false);
+    });
+    d.setSelected(true);
+  }
 }
